@@ -1,0 +1,97 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img{
+    max-width:100%; /*Sikre responsivitet*/
+}
+
+header {
+    background-color: indianred;
+    padding: 1em;
+}
+
+nav ul{
+    list-style-type: none; /*Fjerner bulletpoints fra listen*/
+    gap:1em;
+    padding: 0;
+}
+
+nav li{
+    padding:0.8em;
+}
+
+nav li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/*Main*/
+main{
+    margin: 4em;
+}
+
+section{
+    margin-bottom: 3em;
+}
+
+
+/*Desktop version*/
+@media screen and (min-width: 769px){
+    #bars{
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    section:nth-of-type(1){
+        display: flex;
+        gap: 2em;
+    }
+
+    section:nth-of-type(1) div{
+        width: 50%;
+    }
+
+    section:nth-of-type(1) img{
+        width: 50%;
+    }
+
+
+
+}
+
+/*Tablet og mobil*/
+@media screen and (max-width:768px){
+    header nav{
+        display: none;
+    }
+    header{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .show{
+        display: block;
+        position: absolute;
+        top: 49px;
+        left: 0;
+        background-color: rgb(158, 72, 72);
+        width: 100%;
+    }
+    button#bars{
+        background-color: transparent;
+        border: none;
+    }
+
+        section:nth-of-type(1) div{
+        padding-bottom: 2em;
+    }
+}
